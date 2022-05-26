@@ -1,0 +1,9 @@
+CPU usage is 37.5 %
+CPU frequency is 1696 MHz
+CPU temperature is 0.0 degC
+RAM usage is 7091 MB
+RAM total is 8051 MB
+RAM usage is 88.1 %
+Swap usage is 8775 MB
+Swap total is 11147 MB
+Swap usage is 78.7 %

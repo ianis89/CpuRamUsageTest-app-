@@ -1,6 +1,9 @@
 import os
 import psutil
 import sys
+import time
+
+"Info at <current_datetime>"
 
 
 def main():
@@ -13,6 +16,7 @@ def main():
     print("Swap usage is {} MB".format(int(get_swap_usage() / 1024 / 1024)))
     print("Swap total is {} MB".format(int(get_swap_total() / 1024 / 1024)))
     print("Swap usage is {} %".format(get_swap_usage_pct()))
+    print(time.asctime(time.localtime(time.time())))
 
 
 def get_cpu_usage_pct():
@@ -59,10 +63,13 @@ def get_swap_usage_pct():
     return psutil.swap_memory().percent
 
 
-filename = open("output file.txt", "w")
+filename = open("output file.txt", "a")
 sys.stdout = filename
 # # print ("Anything printed will go to the output file.txt")
 
 
 if __name__ == "__main__":
     main()
+
+while True:
+    time.sleep(1)
